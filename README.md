@@ -61,6 +61,11 @@ connected (press CTRL+C to quit)
 < hello world
 ```
 
+ロケーションはこう投げる
+```
+> {"message":"sendlocation", "data":{"latitude":111.1111, "longitude":66.6666}}
+```
+
 ## License Summary
 
 This sample code is made available under a modified MIT license. See the LICENSE file.
