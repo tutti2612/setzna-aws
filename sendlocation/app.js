@@ -14,8 +14,8 @@ exports.handler = async event => {
     },
     UpdateExpression: "set latitude = :lat, longitude=:lng",
     ExpressionAttributeValues:{
-      ":lat": location.latitude,
-      ":lng": location.longitude,
+      ":lat": parseFloat(location.latitude),
+      ":lng": parseFloat(location.longitude),
     }
   };
 

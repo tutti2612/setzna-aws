@@ -10,8 +10,8 @@ exports.handler = async event => {
     TableName: process.env.TABLE_NAME,
     Item: {
       connectionId: event.requestContext.connectionId,
-      latitude: event.queryStringParameters.latitude,
-      longitude: event.queryStringParameters.longitude
+      latitude: parseFloat(event.queryStringParameters.latitude),
+      longitude: parseFloat(event.queryStringParameters.longitude)
     }
   };
 
