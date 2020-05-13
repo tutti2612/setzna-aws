@@ -8,7 +8,7 @@ const ddb = new AWS.DynamoDB.DocumentClient({ apiVersion: '2012-08-10', region: 
 const { TABLE_NAME } = process.env;
 
 // だいたい日本の中心である北緯35度地点の緯度、経度
-ref: https://easyramble.com/latitude-and-longitude-per-kilometer.html
+// ref: https://easyramble.com/latitude-and-longitude-per-kilometer.html
 const SETZNA_LAT = 0.00045066864872880997; // 50mあたりの緯度
 const SETZNA_LNG = 0.0005483202357745697; // 50mあたりの経度
 
