@@ -51,14 +51,14 @@ $ npm install -g wscat
 ```
 3. On the console, connect to your published API endpoint by executing the following command:
 ``` bash
-$ wscat -c wss://{YOUR-API-ID}.execute-api.{YOUR-REGION}.amazonaws.com/{STAGE}
+$ wscat -c wss://{YOUR-API-ID}.execute-api.{YOUR-REGION}.amazonaws.com/{STAGE}?latitude={LATITUDE}&longitude={LONGITUDE}
 ```
 4. To test the sendMessage function, send a JSON message like the following example. The Lambda function sends it back using the callback URL: 
 ``` bash
-$ wscat -c wss://{YOUR-API-ID}.execute-api.{YOUR-REGION}.amazonaws.com/prod
+$ wscat -c wss://{YOUR-API-ID}.execute-api.{YOUR-REGION}.amazonaws.com/prod?latitude=123.1234&longitude=65.3434
 connected (press CTRL+C to quit)
-> {"message":"sendmessage", "data":"hello world"}
-< hello world
+> {"message":"sendmessage", "data":{"name":"kohei", "content":"hello world"}}
+< {"name":"kohei", "content":"hello world"}
 ```
 
 ロケーションはこう投げる
